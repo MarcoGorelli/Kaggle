@@ -1,9 +1,9 @@
 {
   "context": ".",
-  "image": "gcr.io/kaggle-gpu-images/python",
   "extensions": [
     "ms-python.python"
   ],
+  "image": "gcr.io/kaggle-gpu-images/python",
   "name": "kaggle",
   "runArgs": [
     "--runtime=nvidia"
