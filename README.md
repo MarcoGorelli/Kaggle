@@ -47,3 +47,17 @@ git submodule add git@github.com:MarcoGorelli/tweet-sentiment-extraction.git
 ```
 
 Any input for the competition goes in the `input` folder here.
+
+Push notebook to Kaggle
+-----------------------
+
+If you want to enable push a notebook to Kaggle for a particular competition, you can do
+
+```
+echo kaggle kernels push > .git/modules/<COMPETITION SLUG GOES HERE>/hooks/pre-push
+chmod +x .git/modules/<COMPETITION SLUG GOES HERE>/hooks/pre-push
+```
+
+Then, any time you push a commit to GitHub, you will be deploying your latest changes to
+Kaggle. If you want to push a commit without deploying a new notebook to Kaggle, you can
+add the `--no-verify` flag when you push.
